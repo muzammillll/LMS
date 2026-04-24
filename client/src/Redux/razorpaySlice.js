@@ -128,5 +128,4 @@ const razorpaySlice = createSlice({
   },
 });
 
-export const {} = razorpaySlice.actions;
 export default razorpaySlice.reducer;

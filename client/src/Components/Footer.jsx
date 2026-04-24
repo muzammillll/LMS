@@ -17,26 +17,26 @@ const Footer = () => {
         {/* adding the social media section */}
         <section className="flex items-center justify-center gap-5 text-2xl text-white">
           <a
-            className="hover:text-yellow-500 transition-all ease-in-out duration-300"
-            href="#"
+            className="transition-all duration-300 ease-in-out hover:text-yellow-500"
+            href="/"
           >
             <BsFacebook />
           </a>
           <a
-            className="hover:text-yellow-500 transition-all ease-in-out duration-300"
-            href="#"
+            className="transition-all duration-300 ease-in-out hover:text-yellow-500"
+           href="/"
           >
             <BsInstagram />
           </a>
           <a
-            className="hover:text-yellow-500 transition-all ease-in-out duration-300"
-            href="#"
+            className="transition-all duration-300 ease-in-out hover:text-yellow-500"
+          href="/"
           >
             <BsTwitter />
           </a>
           <a
-            className="hover:text-yellow-500 transition-all ease-in-out duration-300"
-            href="#"
+            className="transition-all duration-300 ease-in-out hover:text-yellow-500"
+           href="/"
           >
             <BsLinkedin />
           </a>

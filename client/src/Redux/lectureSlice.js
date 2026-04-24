@@ -93,5 +93,4 @@ const lectureSlice = createSlice({
   },
 });
 
-export const {} = lectureSlice.actions;
 export default lectureSlice.reducer;

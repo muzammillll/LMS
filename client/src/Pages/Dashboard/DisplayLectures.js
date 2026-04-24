@@ -28,10 +28,10 @@
 
     // fetching the course lecture data
     useEffect(() => {
-      (async () => {
-        await dispatch(getCourseLecture(courseDetails._id));
-      })();
-    }, []);
+      if (courseDetails?._id) {
+        dispatch(getCourseLecture(courseDetails._id));
+      }
+    }, [dispatch, courseDetails]);
     return (
       <Layout>
         <div className="flex flex-col gap-10 items-center justify-center min-h-[90vh] py-10 text-white mx-[5%]">
