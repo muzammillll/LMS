@@ -28,7 +28,8 @@ const state = location?.state;
       {/* wrapper for course description */}
       <div className="min-h-[90vh] pt-12 px-20 flex flex-col items-center justify-center text-white">
         {/* displaying the course details */}
-        <div className="relative grid grid-cols-2 gap-10 py-10">
+        {/* <div className="relative grid grid-cols-2 gap-10 py-10"> */}
+        <div className="relative grid grid-cols-1 gap-6 px-4 py-10 md:grid-cols-2 md:px-20">
           {/* creating the left side of description box */}
           <div className="space-y-5">
             <img
