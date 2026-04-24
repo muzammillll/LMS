@@ -74,7 +74,8 @@ export const verifySubscription = asyncHandler(async (req, res, next) => {
 
     res.cookie("token", token, {
       httpOnly: true,
-      secure: false,
+      secure: true,
+      sameSite: "None",
     });
 
     return res.status(200).json({

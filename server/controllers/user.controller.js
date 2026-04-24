@@ -19,8 +19,8 @@ import sendEmail from '../utils/sendEmail.js';
 
 const cookieOptions = {
   httpOnly: true,
-  secure: false, // local dev
-  sameSite: "Lax",
+  secure: true, // local dev
+  sameSite: "None",
   maxAge: 7 * 24 * 60 * 60 * 1000,
 };
 
@@ -163,8 +163,8 @@ export const logoutUser = asyncHandler(async (_req, res, _next) => {
 
   res.cookie('token', null, {
     httpOnly: true,
-    secure: false,
-    sameSite: "Lax",
+    secure: true,
+    sameSite: "None",
     expires: new Date(0),
   });
   // Sending the response
