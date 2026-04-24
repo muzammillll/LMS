@@ -34,16 +34,16 @@
     }, [dispatch, courseDetails]);
     return (
       <Layout>
-        <div className="flex flex-col gap-10 items-center justify-center min-h-[90vh] py-10 text-white mx-[5%]">
+       <div className="flex flex-col gap-10 items-center justify-center min-h-[90vh] py-10 text-white px-4 md:px-10">
           {/* displaying the course name */}
 
           <h1 className="text-2xl font-semibold text-center text-yellow-500">
             Course Name : {courseDetails?.title}
           </h1>
 
-          <div className="flex justify-center w-full gap-10">
+          <div className="flex flex-col items-center w-full gap-5 md:flex-row md:items-start">
             {/* left section for playing the video and displaying course details to admin */}
-            <div className="space-y-5 w-[28rem] p-2 rounded-lg shadow-[0_0_10px_black]">
+            <div className="space-y-5 w-full md:w-[28rem] p-2 rounded-lg shadow-[0_0_10px_black]">
               <video
                 className="object-fill w-full rounded-tl-lg rounded-tr-lg"
                 src={lectures && lectures[currentVideoIndex]?.lecture?.secure_url}
@@ -68,7 +68,7 @@
             </div>
 
             {/* right section for displaying all the lectures of the course */}
-            <ul className="w-[28rem] p-2 rounded-lg shadow-[0_0_10px_black] space-y-4">
+            <ul className="w-full md:w-[28rem] p-2 rounded-lg shadow-[0_0_10px_black] space-y-4">
               <li className="flex items-center justify-between text-xl font-semibold text-yellow-500">
                 <p>Lectures List</p>
                 {role === "ADMIN" && (

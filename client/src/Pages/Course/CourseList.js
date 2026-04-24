@@ -15,19 +15,26 @@ const Courses = () => {
   return (
     <Layout>
       {/* courses container for displaying the cards */}
-      <div className="min-h-[90vh] pt-12 pl-20 flex flex-col flex-wrap gap-10 text-white">
-        <h1 className="text-3xl font-semibold text-center">
-          Explore the courses made by{" "}
-          <span className="font-bold text-yellow-500">Industry Experts</span>
-        </h1>
+      <div className="min-h-[90vh] pt-12 px-4 md:px-20 flex flex-col gap-10 text-white">
+  
+  <h1 className="text-2xl font-semibold text-center md:text-3xl">
+    Explore the courses made by{" "}
+    <span className="font-bold text-yellow-500">Industry Experts</span>
+  </h1>
 
-        {/* wrapper for courses card */}
-        <div className="flex flex-wrap mb-10 gap-14">
-          {coursesData?.map((element) => {
-            return <CourseCard key={element._id} data={element} />;
-          })}
-        </div>
-      </div>
+  {!coursesData?.length && (
+    <p className="text-center text-gray-400">
+      No courses available right now.
+    </p>
+  )}
+
+  <div className="grid grid-cols-1 gap-6 mb-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+    {coursesData?.map((element) => (
+      <CourseCard key={element._id} data={element} />
+    ))}
+  </div>
+
+</div>
     </Layout>
   );
 };
