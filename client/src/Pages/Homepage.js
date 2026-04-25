@@ -6,27 +6,27 @@ import { Link } from "react-router-dom";
 const Homepage = () => {
   return (
     <Layout>
-      <div className="pt-10 text-white flex items-center justify-center gap-10 mx-16 h-[90vh]">
+      <div className="flex flex-col-reverse items-center justify-center gap-10 px-4 pt-10 text-white md:flex-row md:px-16 min-h-[90vh]">
         {/* for platform details */}
-        <div className="w-1/2 space-y-6">
-          <h1 className="text-5xl font-semibold">
+        <div className="w-full max-w-xl space-y-6 text-center md:w-1/2 md:text-left">
+        <h1 className="text-3xl font-semibold md:text-5xl">
             Find out best{" "}
-            <span className="text-yellow-500 font-bold">Online Courses</span>
+            <span className="font-bold text-yellow-500">Online Courses</span>
           </h1>
-          <p className="text-xl text-gray-200">
+          <p className="text-base text-gray-200 md:text-xl">
             We have a large library of courses taught by highly skilled and
             qualified faculities at a very affordable cost.
           </p>
 
           {/* for buttons */}
-          <div className="space-x-6">
+          <div className="flex flex-col gap-4 md:flex-row md:gap-6">
             <Link to={"/courses"}>
-              <button className="bg-yellow-500 px-5 py-3 rounded-md font-semibold text-lg cursor-pointer hover:bg-yellow-600 transition-all ease-in-out duration-300">
+              <button className="px-5 py-3 text-lg font-semibold transition-all duration-300 ease-in-out bg-yellow-500 rounded-md cursor-pointer hover:bg-yellow-600">
                 Explore Courses
               </button>
             </Link>
             <Link to={"/contact"}>
-              <button className="border border-yellow-500 px-5 py-3 rounded-md font-semibold text-lg cursor-pointer hover:border-yellow-600 transition-all ease-in-out duration-300">
+              <button className="px-5 py-3 text-lg font-semibold transition-all duration-300 ease-in-out border border-yellow-500 rounded-md cursor-pointer hover:border-yellow-600">
                 Contact Us
               </button>
             </Link>
@@ -34,8 +34,12 @@ const Homepage = () => {
         </div>
 
         {/* right section for image */}
-        <div className="w-1/2 flex items-center justify-center">
-          <img src={homePageMainImage} alt="home page image" />
+        <div className="flex items-center justify-center w-full md:w-1/2">
+        <img
+  src={homePageMainImage}
+  alt="home page" 
+  className="w-full max-w-md"
+/>
         </div>
       </div>
     </Layout>

@@ -57,10 +57,10 @@ const Contact = () => {
 
   return (
     <Layout>
-      <div className="flex items-center justify-center h-[100vh]">
+     <div className="flex items-center justify-center min-h-[90vh] px-4">
         <form
           onSubmit={handleFormSubmit}
-          className="flex flex-col items-center justify-center gap-2 p-5 rounded-md text-white shadow-[0_0_10px_black] w-[22rem]"
+          className="flex flex-col items-center justify-center gap-2 p-5 rounded-md text-white shadow-[0_0_10px_black] w-full max-w-md"
         >
           <h1 className="text-3xl font-semibold">Contact Form</h1>
           <div className="flex flex-col w-full gap-1">
@@ -68,7 +68,7 @@ const Contact = () => {
               Name
             </label>
             <input
-              className="bg-transparent border px-2 py-1 rounded-sm"
+              className="px-2 py-1 bg-transparent border rounded-sm"
               id="name"
               type="text"
               name="name"
@@ -83,7 +83,7 @@ const Contact = () => {
               Email
             </label>
             <input
-              className="bg-transparent border px-2 py-1 rounded-sm"
+              className="px-2 py-1 bg-transparent border rounded-sm"
               id="email"
               type="email"
               name="email"
@@ -98,7 +98,7 @@ const Contact = () => {
               Message
             </label>
             <textarea
-              className="bg-transparent border px-2 py-1 rounded-sm resize-none h-40"
+              className="h-40 px-2 py-1 bg-transparent border rounded-sm resize-none"
               name="message"
               id="message"
               placeholder="Enter your message"
@@ -108,7 +108,7 @@ const Contact = () => {
           </div>
 
           <button
-            className="w-full bg-yellow-600 hover:bg-yellow-500 transition-all ease-in-out duration-300 rounded-sm py-2 font-semibold text-lg cursor-pointer"
+            className="w-full py-2 text-lg font-semibold transition-all duration-300 ease-in-out bg-yellow-600 rounded-sm cursor-pointer hover:bg-yellow-500"
             type="submit"
           >
             Submit
