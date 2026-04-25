@@ -38,7 +38,7 @@ const Homepage = () => {
         <img
   src={homePageMainImage}
   alt="home page" 
-  className="w-full max-w-md"
+  className="w-full max-w-xs sm:max-w-sm md:max-w-md"
 />
         </div>
       </div>
