@@ -6,40 +6,60 @@ import { Link } from "react-router-dom";
 const Homepage = () => {
   return (
     <Layout>
-      <div className="flex flex-col-reverse items-center justify-center gap-10 px-4 pt-10 text-white md:flex-row md:px-16 min-h-[90vh]">
-        {/* for platform details */}
-        <div className="w-full max-w-xl space-y-6 text-center md:w-1/2 md:text-left">
-        <h1 className="text-3xl font-semibold md:text-5xl">
-            Find out best{" "}
-            <span className="font-bold text-yellow-500">Online Courses</span>
-          </h1>
-          <p className="text-base text-gray-200 md:text-xl">
-            We have a large library of courses taught by highly skilled and
-            qualified faculities at a very affordable cost.
-          </p>
+      <div className="text-white bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
+        <div className="flex flex-col-reverse items-center justify-center max-w-6xl min-h-[90vh] md:min-h-screen gap-10 px-4 py-10 mx-auto md:flex-row md:justify-between md:px-16">
+          
+          {/* LEFT: text section */}
+          <div className="w-full max-w-lg mt-4 space-y-5 text-center md:mt-0 md:w-1/2 md:text-left">
+            
+            <h1 className="text-3xl font-semibold leading-tight sm:text-4xl md:text-5xl">
+              Find out best{" "}
+              <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-600">
+                Online Courses
+              </span>
+            </h1>
 
-          {/* for buttons */}
-          <div className="flex flex-col gap-4 md:flex-row md:gap-6">
-            <Link to={"/courses"}>
-              <button className="px-5 py-3 text-lg font-semibold transition-all duration-300 ease-in-out bg-yellow-500 rounded-md cursor-pointer hover:bg-yellow-600">
-                Explore Courses
-              </button>
-            </Link>
-            <Link to={"/contact"}>
-              <button className="px-5 py-3 text-lg font-semibold transition-all duration-300 ease-in-out border border-yellow-500 rounded-md cursor-pointer hover:border-yellow-600">
-                Contact Us
-              </button>
-            </Link>
+            <p className="text-sm leading-relaxed text-gray-300 sm:text-base md:text-lg">
+              We have a large library of courses taught by highly skilled and
+              qualified faculties at a very affordable cost.
+            </p>
+
+            {/* buttons */}
+            <div className="flex flex-col items-center w-full gap-4 md:flex-row md:justify-start">
+              
+              {/* Primary Button */}
+              <Link to={"/courses"}>
+                <button className="w-full sm:w-[80%] md:w-auto px-5 py-3 text-lg font-semibold bg-yellow-500 text-black rounded-md 
+                hover:bg-yellow-600 hover:scale-105 active:scale-95 transition-all duration-300">
+                  Explore Courses
+                </button>
+              </Link>
+
+              {/* Secondary Button */}
+              <Link to={"/contact"}>
+                <button className="w-full sm:w-[80%] md:w-auto px-5 py-3 text-lg font-semibold border border-yellow-500 rounded-md 
+                hover:border-yellow-600 hover:scale-105 active:scale-95 transition-all duration-300">
+                  Contact Us
+                </button>
+              </Link>
+
+            </div>
           </div>
-        </div>
 
-        {/* right section for image */}
-        <div className="flex items-center justify-center w-full md:w-1/2">
-        <img
-  src={homePageMainImage}
-  alt="home page" 
-  className="w-full max-w-xs sm:max-w-sm md:max-w-md"
-/>
+          {/* RIGHT: image section */}
+          <div className="relative flex items-center justify-center w-full mt-6 md:mt-0 md:w-1/2">
+            
+            {/* Glow Effect */}
+            <div className="absolute z-0 bg-yellow-500 rounded-full w-72 h-72 opacity-20 blur-3xl"></div>
+
+            {/* Image */}
+            <img
+              src={homePageMainImage}
+              alt="home page"
+              className="relative z-10 w-64 max-w-md transition-transform duration-500 sm:w-72 md:w-full drop-shadow-2xl hover:scale-105"
+            />
+          </div>
+
         </div>
       </div>
     </Layout>
